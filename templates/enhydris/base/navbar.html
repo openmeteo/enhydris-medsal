@@ -1,7 +1,14 @@
 {% extends "enhydris/base/navbar-default.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block navbar_brand %}
   <a class="navbar-brand" href="/">MEDSAL Web Observatory</a>
+{% endblock %}
+
+
+{% block main_menu %}
+  <li class="nav-item"><a class="nav-link" href="/synoptic/medsal">{% trans "warning system" %}</a></li>
+  {{ block.super }}
 {% endblock %}
